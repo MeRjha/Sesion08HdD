@@ -1,9 +1,14 @@
 name: main2mmaster
 on:
   workflow_dispatch:
+permissions:
+  actions: write
 jobs:
-  imp1:
+  activar-otro:
     runs-on: ubuntu-latest
     steps:
-      - run: |
-          echo "ok master"
+      - name: llamado1
+        uses: benc-uk/workflow-dispatch@v1
+        with:
+          workflow: main2esclavo.yml
+          token: ${{ secrets.GITHUB_TOKEN }}
