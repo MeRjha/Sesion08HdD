@@ -1,0 +1,9 @@
+name: main2mmaster
+on:
+  workflow_dispatch:
+jobs:
+  imp1:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "ok master"

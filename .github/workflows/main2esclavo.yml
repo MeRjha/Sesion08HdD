@@ -1,0 +1,9 @@
+name: main2esclavo
+on:
+  workflow_dispatch:
+jobs:
+  imp1:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "ok remoto"
